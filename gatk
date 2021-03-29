@@ -1,5 +1,4 @@
-GATK notes
-
+* GATK notes
 ```
 # 一个个地下载hg19的染色体
 for i in $(seq 1 22) X Y M;

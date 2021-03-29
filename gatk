@@ -1,0 +1,18 @@
+GATK notes
+
+```
+# 一个个地下载hg19的染色体
+for i in $(seq 1 22) X Y M;
+do echo $i;
+wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/chr${i}.fa.gz;
+done
+
+gunzip *.gz
+
+# 用cat按照染色体的顺序拼接起来，因为GATK后面的一些步骤对染色体顺序要求非常变态，如果下载整个hg19，很难保证染色体顺序是1-22，X,Y,M
+for i in $(seq 1 22) X Y M;
+do cat chr${i}.fa >> hg19.fasta;
+done
+
+rm -fr chr*.fasta
+```

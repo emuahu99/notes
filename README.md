@@ -1,4 +1,4 @@
-# notes
+# notes prinseq, trimmomatic 及 seqtk
 
 ```
 #直接用fastq-dump下载
@@ -80,6 +80,15 @@ tar xzvf lec7.tar.gz
 
 # Link the fastqc under an "shortcut" in ~/bin
 ln -s ~/src/FastQC/fastqc ~/bin/fastqc
+
+
+Install prinseq
+# We need to also pass the -L flag since this site uses link redirects and
+# we want to follow those
+curl -OL http://downloads.sourceforge.net/project/prinseq/standalone/prinseq-lite-0.20.4.tar.gz
+
+
+
 
 
 
